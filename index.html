@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SolarPayDay Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>SolarPayDay Calculator</h1>
+
+  <!-- Solar System Criteria Form -->
+  <section id="solar-system-criteria">
+    <h2>Solar System Criteria</h2>
+    <form id="solar-form">
+      <label>
+        System Cost:
+        <input type="number" id="systemCost" required>
+      </label>
+      <label>
+        System Size (kW):
+        <input type="number" id="systemSize" required>
+      </label>
+      <label>
+        Average Electricity Bill:
+        <input type="number" id="averageBill" required>
+      </label>
+      <label>
+        Y/Y Electricity Rate Increase (%):
+        <input type="number" id="rateIncrease" value="3" required>
+      </label>
+      <label>
+        Tax Credit (%):
+        <input type="number" id="taxCredit" required>
+      </label>
+      <label>
+        Years You Plan to Own the Home:
+        <input type="number" id="yearsOwnHome" required>
+      </label>
+    </form>
+  </section>
+
+  <!-- Financed Criteria Form -->
+  <section id="financed-criteria">
+    <h2>Financed Criteria</h2>
+    <form id="finance-form">
+      <label>
+        Down Payment:
+        <input type="number" id="downPayment" required>
+      </label>
+      <label>
+        Interest Rate (%):
+        <input type="number" id="interestRate" required>
+      </label>
+      <label>
+        Loan Term (Years):
+        <input type="number" id="loanTerm" required>
+      </label>
+    </form>
+  </section>
+
+  <button id="calculate-btn">Calculate</button>
+
+  <!-- Results Section -->
+  <section id="results">
+    <h2>Results</h2>
+    <div id="results-display"></div>
+  </section>
+
+  <!-- Charts Section -->
+  <section id="charts">
+    <h2>Visual Graphs</h2>
+    <canvas id="chartWithoutTax"></canvas>
+    <canvas id="chartWithTax"></canvas>
+  </section>
+
+  <!-- Include Chart.js and Your Script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
